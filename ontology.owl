@@ -1,0 +1,1507 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://rarebib.pkudh.org/ontology/CABC#"
+     xml:base="https://rarebib.pkudh.org/ontology/CABC"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:CABC="https://rarebib.pkudh.org/ontology/CABC#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:fabio="http://purl.org/spar/fabio"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:bibframe="http://id.loc.gov/ontologies/bibframe/">
+    <owl:Ontology rdf:about="https://rarebib.pkudh.org/ontology/CABC.owl">
+        <owl:versionIRI rdf:resource="https://rarebib.pkudh.org/ontology/CABC/1.0."/>
+        <dc:creator xml:lang="en">Linxu Wang</dc:creator>
+        <dcterms:license xml:lang="en">Copyright © [2022] The Research Center for Digital Humanities at Peking University®</dcterms:license>
+        <rdfs:comment xml:lang="zh"></rdfs:comment>
+        <owl:versionInfo xml:lang="en">version 1.0.0</owl:versionInfo>
+        <skos:prefLabel xml:lang="en">The Chinese Ancient Book Catalog Ontology</skos:prefLabel>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#birthYear -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#birthYear">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#DateTime"/>
+        <skos:prefLabel xml:lang="zh">出生年</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#carver -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#carver">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">刻工</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#carvingDate -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#carvingDate">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#DateTime"/>
+        <skos:prefLabel xml:lang="zh">雕版日期</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#collectionInstitution -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#collectionInstitution">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Organization"/>
+        <skos:prefLabel xml:lang="zh">馆藏机构</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#collectionPlace -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#collectionPlace">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Place"/>
+        <skos:prefLabel xml:lang="zh">馆藏地</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#contributor -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#contributor">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">其他责任者</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#creator -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#creator">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">创作者</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#deathYear -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#deathYear">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#DateTime"/>
+        <skos:prefLabel xml:lang="zh">死亡年</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#dynasty -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#dynasty">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+        <skos:prefLabel xml:lang="zh">所属朝代</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#formerCollector -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#formerCollector">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">藏书家</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#formerReviewer -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#formerReviewer">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">批校题跋者</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#hasAppendix -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#hasAppendix">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Appendix"/>
+        <skos:prefLabel xml:lang="zh">有附录</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#hasEdition -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#hasEdition">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <skos:prefLabel xml:lang="zh">有版本</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#hasItem -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#hasItem">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <skos:prefLabel xml:lang="zh">有藏品</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#hasPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#hasPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#hasSeal -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#hasSeal">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Seal"/>
+        <skos:prefLabel xml:lang="zh">有钤印</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#isOfEdition -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#isOfEdition">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#EditionCollection"/>
+        <skos:prefLabel xml:lang="zh">版本类型</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#isOfSubject -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#isOfSubject">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Classification"/>
+        <skos:prefLabel xml:lang="zh">著录分类</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#location -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#location">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Organization"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Place"/>
+        <skos:prefLabel xml:lang="zh">地点</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#owner -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#owner">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Seal"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Agent"/>
+        <skos:prefLabel xml:lang="zh">印主</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#printDate -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#printDate">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Time"/>
+        <skos:prefLabel xml:lang="zh">印刷日期</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#printer -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#printer">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">印刷者</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#publicationDate -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#publicationDate">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Time"/>
+        <skos:altLabel xml:lang="zh">版本日期</skos:altLabel>
+        <skos:prefLabel xml:lang="zh">出版日期</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#publicationPlace -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#publicationPlace">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Place"/>
+        <skos:altLabel xml:lang="zh">版本地点</skos:altLabel>
+        <skos:prefLabel xml:lang="zh">出版地</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#publisher -->
+
+    <owl:ObjectProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#publisher">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <skos:prefLabel xml:lang="zh">出版者</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#banKou -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#banKou">
+        <rdfs:subPropertyOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#layout"/>
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="zh">指书籍装订成册后开合一端的侧面，有“白口”、“黑口”等款式。</rdfs:comment>
+        <skos:altLabel xml:lang="zh">书口</skos:altLabel>
+        <skos:altLabel xml:lang="zh">口</skos:altLabel>
+        <skos:altLabel xml:lang="zh">页口</skos:altLabel>
+        <skos:prefLabel xml:lang="zh">版口</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#banKuang -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#banKuang">
+        <rdfs:subPropertyOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#layout"/>
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="zh">指书籍书页四周的界限。主要形式为边线栏。四周单线者称“四周单边”，四周双线者称“四周双边”，上下单线而左右双线者称“左右双边”。为求艺术美观，也有用图案、花样组成的板框，称为“花边”。</rdfs:comment>
+        <skos:altLabel xml:lang="zh">框廓</skos:altLabel>
+        <skos:altLabel xml:lang="zh">边栏</skos:altLabel>
+        <skos:prefLabel xml:lang="zh">版框</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#banXin -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#banXin">
+        <rdfs:subPropertyOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#layout"/>
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="zh">指古籍书页两半页之间没有正文的一行。为折装帧整齐，版心多刻有鱼纹、口线等，为便检索，也常记有书名、卷数、页码、每卷小题、刻工姓名等文字。</rdfs:comment>
+        <skos:altLabel xml:lang="zh">心</skos:altLabel>
+        <skos:altLabel xml:lang="zh">页心</skos:altLabel>
+        <skos:prefLabel xml:lang="zh">版心</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#hangGe -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#hangGe">
+        <rdfs:subPropertyOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#layout"/>
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="zh">指书中正文的行数和字数。同一种书，不同时期由不同刻书家所刻印的行款往往不同。因此，行款是区别版本的一种依据。</rdfs:comment>
+        <skos:altLabel xml:lang="zh">行款</skos:altLabel>
+        <skos:prefLabel xml:lang="zh">行格</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#isFoundAt -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#isFoundAt">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:prefLabel xml:lang="zh">出土于</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#language -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#language">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+        <skos:definition xml:lang="en">A language of the resource.</skos:definition>
+        <skos:prefLabel xml:lang="en">language</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">语言</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#layout -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#layout">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="zh">书籍排版的样式，包括版面、版心、版法、书眉、页码、行距、标题、字体、插画等大小格式的安排。</rdfs:comment>
+        <skos:prefLabel xml:lang="zh">版式</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#layoutSize -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#layoutSize">
+        <rdfs:subPropertyOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#layout"/>
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:broadMatch rdf:resource="http://id.loc.gov/ontologies/bibframe/dimensions"/>
+        <skos:prefLabel xml:lang="zh">板框尺寸</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#title -->
+
+    <owl:DatatypeProperty rdf:about="https://rarebib.pkudh.org/ontology/CABC#title">
+        <rdfs:domain rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="zh">古籍资源的名称。</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/"/>
+        <skos:prefLabel xml:lang="en">title</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">题名</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Classification"/>
+        <skos:definition xml:lang="en">Concept Collections.</skos:definition>
+        <skos:prefLabel xml:lang="en">Collection</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Classification"/>
+        <skos:definition xml:lang="en">Concept Schemes.</skos:definition>
+        <skos:prefLabel xml:lang="en">Concept Scheme</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Agent -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Agent">
+        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <skos:definition xml:lang="en">Entity having a role in an ancient book resource, such as a person or organization.</skos:definition>
+        <skos:prefLabel xml:lang="en">Agent</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">施动者</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#AncientBook -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#AncientBook">
+        <rdfs:comment xml:lang="zh">中国古代书籍的简称。主要指书写、印刷于1912年以前又具有中国古典装帧形式的书籍。</rdfs:comment>
+        <skos:broadMatch rdf:resource="http://purl.org/vocab/frbr/core#Endeavour"/>
+        <skos:prefLabel xml:lang="en">ancient book</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">古籍</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#AncientMap -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#AncientMap">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <skos:prefLabel xml:lang="zh">古地图</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Appendix -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Appendix">
+        <skos:definition xml:lang="en">Abstract, review, etc. intended to supplement the primary content of a resource.</skos:definition>
+        <skos:prefLabel xml:lang="en">Appendix</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Bamboo -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Bamboo">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Embroidery"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Gold-PlatedSilverSheet"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Oracle"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Woodblock"/>
+        <rdfs:comment xml:lang="en">Ancient texts on bamboo/wooden slips(strips).</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Bamboo</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">简牍</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#BookInEthicLanguage -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#BookInEthicLanguage">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <skos:prefLabel xml:lang="zh">少数名族古籍</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#BookinChinese -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#BookinChinese">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <skos:prefLabel xml:lang="zh">汉文古籍</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Classification -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Classification">
+        <skos:definition xml:lang="en">System of coding and organizing materials according to their subject.</skos:definition>
+        <skos:prefLabel xml:lang="zh">分类</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#ClassificationGCCAB -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#ClassificationGCCAB">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <skos:prefLabel xml:lang="en">General Catalogue of Chinese Ancient Books Classification</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">《中国古籍总目》分类体系</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#ClockTime -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#ClockTime">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#GeneralTimeDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#DateTime -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#DateTime">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#GeneralTimeDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#DunhuangManuscript -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#DunhuangManuscript">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <skos:prefLabel xml:lang="zh">敦煌遗书</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Dynasty -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Dynasty">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#HistoricalTimeDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Edition -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Edition">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#AncientBook"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+        <skos:definition xml:lang="en">Resource reflecting an individual, material embodiment of a Work.</skos:definition>
+        <skos:prefLabel xml:lang="en">Edition</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">版本</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#EditionCollection -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#EditionCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <skos:prefLabel xml:lang="en">Collection of editions</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">版本类型</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Embroidery -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Embroidery">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Gold-PlatedSilverSheet"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Oracle"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Woodblock"/>
+        <skos:prefLabel xml:lang="zh">刺绣本</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#GeneralTimeDescription -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#GeneralTimeDescription">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Time"/>
+        <skos:prefLabel xml:lang="en">General time description</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">通用时间描述</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Gold-PlatedSilverSheet -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Gold-PlatedSilverSheet">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Oracle"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Woodblock"/>
+        <skos:prefLabel xml:lang="zh">鎏金银碟</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#HistoricalTimeDescription -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#HistoricalTimeDescription">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Time"/>
+        <skos:prefLabel xml:lang="en">Historical time description</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">历史时间描述</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Item -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Item">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#AncientBook"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+        <skos:definition xml:lang="en">Single example of an Edition.</skos:definition>
+        <skos:prefLabel xml:lang="en">Item</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">藏品</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Oracle -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Oracle">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Woodblock"/>
+        <rdfs:comment xml:lang="en">Oracle are the tortoise and animal bones used in ancient China for divination.</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Oracle</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">甲骨</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Organization -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Organization">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Agent"/>
+        <skos:definition xml:lang="en">Group of persons and/or organizations that acts, or may act, as a unit.</skos:definition>
+        <skos:prefLabel xml:lang="zh">组织</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Person -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Person">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Agent"/>
+        <skos:definition xml:lang="en">Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).</skos:definition>
+        <skos:prefLabel xml:lang="zh">人</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#PhaseTime -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#PhaseTime">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#GeneralTimeDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Place -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Place">
+        <skos:definition xml:lang="en">Geographic location.</skos:definition>
+        <skos:prefLabel xml:lang="en">Place</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">地点</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Printed -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Printed">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <owl:disjointWith rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Woodblock"/>
+        <rdfs:comment xml:lang="zh">Resource that is printed.</rdfs:comment>
+        <skos:broadMatch rdf:resource="http://id.loc.gov/ontologies/bibframe/Print"/>
+        <skos:prefLabel xml:lang="zh">印本</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Rubbing -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Rubbing">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Item"/>
+        <rdfs:comment xml:lang="zh">拓片（拓本、拓版、脱本）是指用染料将硬表面上的文字图符复制到轻易、便于携带的纸张上的技艺，也指用从铸刻物上拓印出文字和图案的墨本。</rdfs:comment>
+        <skos:definition xml:lang="en">Rubbing from stone inscriptions and calligraphic works.</skos:definition>
+        <skos:prefLabel xml:lang="zh">碑帖拓本</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Seal -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Seal">
+        <rdfs:comment xml:lang="en">Seal is an impression used by a book collector to indicate ownership of a book and to express his or her personal preference. Seal is usually stamped on the inside of a book by the owner of the book, which indicates that it is owned by an individual, a family, a temple, or other institutions.</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Seal</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">钤印</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Season -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Season">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#GeneralTimeDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Silk -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Silk">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:comment xml:lang="zh">中国古代，用毛笔在缣帛（丝织品）上写的书。春秋战国时已有使用。魏晋以后纸书盛行，帛书遂少用。</rdfs:comment>
+        <skos:altLabel xml:lang="zh">素书</skos:altLabel>
+        <skos:altLabel xml:lang="zh">缣书</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Silk</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">帛书</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Time -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Time">
+        <skos:prefLabel xml:lang="zh">时间</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Woodblock -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Woodblock">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Edition"/>
+        <rdfs:comment xml:lang="en">Woodblock engraving of text or drawings.</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Woodblock</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">版刻</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Work -->
+
+    <owl:Class rdf:about="https://rarebib.pkudh.org/ontology/CABC#Work">
+        <rdfs:subClassOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#AncientBook"/>
+        <rdfs:seeAlso rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+        <skos:definition xml:lang="en">Resource reflecting a conceptual essence of a cataloging resource.</skos:definition>
+        <skos:prefLabel xml:lang="en">Work</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">作品</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Autumn -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#Autumn">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#EarlyStage -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#EarlyStage">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#PhaseTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#FiveDynastiesAndTenKingdoms -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#FiveDynastiesAndTenKingdoms">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#HanDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#HanDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#JingDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#JingDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#KimDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#KimDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#LateStage -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#LateStage">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#PhaseTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#LiaoDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#LiaoDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#MidStage -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#MidStage">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#PhaseTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#MingDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#MingDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#NorthernAndSouthernDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#NorthernAndSouthernDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#QinDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#QinDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#QingDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#QingDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#RepublicOfChina -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#RepublicOfChina">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#SongDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#SongDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Spring -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#Spring">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#SuiDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#SuiDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Summer -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#Summer">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#TangDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#TangDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#ThreeKingdom -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#ThreeKingdom">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#WarringStates -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#WarringStates">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#Winter -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#Winter">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#YuanDynasty -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#YuanDynasty">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Dynasty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00159_edition -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00159_edition">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <hasItem rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00159_item"/>
+        <isOfEdition rdf:resource="https://rarebib.pkudh.org/ontology/CABC#edition_Transcript"/>
+        <banKuang xml:lang="zh">乌丝栏</banKuang>
+        <hangGe xml:lang="zh">每纸二十三至二十四行，行二十三至二十四字。</hangGe>
+        <layout xml:lang="zh">卷轴装。高28厘米，长478厘米。每纸二十三至二十四行，行二十三至二十四字。乌丝栏。</layout>
+        <layoutSize xml:lang="zh">高28厘米，长478厘米。</layoutSize>
+        <skos:prefLabel xml:lang="zh">[佛门问答十二论]　南朝陈天嘉六年（565）写本　卷背　[三佛五门义记]　南北朝写本</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00159_item -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00159_item">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#DunhuangManuscript"/>
+        <collectionInstitution rdf:resource="https://rarebib.pkudh.org/ontology/CABC#org_0381"/>
+        <collectionPlace rdf:resource="https://rarebib.pkudh.org/ontology/CABC#city_120000"/>
+        <formerCollector rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_lsd"/>
+        <hasSeal rdf:resource="https://rarebib.pkudh.org/ontology/CABC#seal_00159"/>
+        <skos:prefLabel xml:lang="zh">[佛门问答十二论]　南朝陈天嘉六年（565）写本　卷背　[三佛五门义记]　南北朝写本　天津博物馆</skos:prefLabel>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00159_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerCollector"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_lsd"/>
+        <rdfs:comment>钤印、收藏</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00159_work -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00159_work">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <hasEdition rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00159_edition"/>
+        <language xml:lang="zh">汉文</language>
+        <title xml:lang="zh">佛门问答十二论</title>
+        <skos:prefLabel xml:lang="zh">[佛门问答十二论]</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00198_edition -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00198_edition">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <hasItem rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00198_item"/>
+        <isOfEdition rdf:resource="https://rarebib.pkudh.org/ontology/CABC#edition_BlockPrint"/>
+        <banKou xml:lang="zh">细黑口</banKou>
+        <banKuang xml:lang="zh">四周双边</banKuang>
+        <hangGe xml:lang="zh">半叶十一行，行二十一字，小字双行二十五字</hangGe>
+        <layout xml:lang="zh">匡高20.3厘米，广13厘米。半叶十一行，行二十一字，小字双行二十五字，细黑口，四周双边。</layout>
+        <layoutSize xml:lang="zh">匡高20.3厘米，广13厘米。</layoutSize>
+        <skos:prefLabel xml:lang="zh">程朱二先生周易传义十卷首一卷　（宋）程颐　朱熹撰　元延祐元年（1314）翠岩精舍刻本</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00198_item -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00198_item">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#BookinChinese"/>
+        <collectionInstitution rdf:resource="https://rarebib.pkudh.org/ontology/CABC#org_0141"/>
+        <collectionPlace rdf:resource="https://rarebib.pkudh.org/ontology/CABC#city_110000"/>
+        <skos:prefLabel xml:lang="zh">程朱二先生周易传义十卷首一卷　（宋）程颐　朱熹撰　元延祐元年（1314）翠岩精舍刻本　北京大学图书馆
+存九卷（一至八、首一卷）</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00198_work -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00198_work">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <creator rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_cy"/>
+        <creator rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zx"/>
+        <hasEdition rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00198_edition"/>
+        <language xml:lang="zh">汉文</language>
+        <title xml:lang="zh">程朱二先生周易传义</title>
+        <skos:prefLabel xml:lang="zh">程朱二先生周易传义十卷首一卷　（宋）程颐　朱熹撰</skos:prefLabel>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00198_work"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#creator"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_cy"/>
+        <rdfs:comment xml:lang="zh">撰</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00198_work"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#creator"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zx"/>
+        <rdfs:comment xml:lang="zh">撰</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00286_edition -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00286_edition">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Printed"/>
+        <carver rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_yj"/>
+        <hasItem rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <isOfEdition rdf:resource="https://rarebib.pkudh.org/ontology/CABC#edition_BlockPrint"/>
+        <banKou xml:lang="zh">细黑口</banKou>
+        <banKuang xml:lang="zh">四周双边</banKuang>
+        <hangGe xml:lang="zh">半叶八行，行十七字，小字双行同</hangGe>
+        <layout xml:lang="zh">匡高20.7厘米，广13.5厘米。半叶八行，行十七字，小字双行同，细黑口，四周双边。</layout>
+        <layoutSize xml:lang="zh">匡高20.7厘米，广13.5厘米。</layoutSize>
+        <skos:prefLabel xml:lang="zh">春秋经传集解三十卷　（晋）杜预撰　（唐）陆德明释文　元岳氏荆溪家塾刻本（卷十九至二十配明刻本）</skos:prefLabel>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_edition"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#carver"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_yj"/>
+        <rdfs:comment xml:lang="zh">刻</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00286_item -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00286_item">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#BookinChinese"/>
+        <collectionInstitution rdf:resource="https://rarebib.pkudh.org/ontology/CABC#org_0101"/>
+        <collectionPlace rdf:resource="https://rarebib.pkudh.org/ontology/CABC#city_110000"/>
+        <formerCollector rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_pq"/>
+        <formerCollector rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_xqx"/>
+        <formerCollector rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_yyc"/>
+        <formerCollector rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zst"/>
+        <formerCollector rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zyl"/>
+        <formerReviewer rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zst"/>
+        <hasSeal rdf:resource="https://rarebib.pkudh.org/ontology/CABC#seal_00286_1"/>
+        <hasSeal rdf:resource="https://rarebib.pkudh.org/ontology/CABC#seal_00286_2"/>
+        <hasSeal rdf:resource="https://rarebib.pkudh.org/ontology/CABC#seal_00286_3"/>
+        <hasSeal rdf:resource="https://rarebib.pkudh.org/ontology/CABC#seal_00286_4"/>
+        <skos:prefLabel xml:lang="zh">春秋经传集解三十卷　（晋）杜预撰　（唐）陆德明释文　春秋名号归一图二卷　（蜀）冯继先撰　年表一卷　元岳氏荆溪家塾刻本（卷十九至二十配明刻本）　国家图书馆</skos:prefLabel>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerReviewer"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zst"/>
+        <rdfs:comment>题跋</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerCollector"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_pq"/>
+        <rdfs:comment xml:lang="zh">钤印、收藏</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerCollector"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_xqx"/>
+        <rdfs:comment xml:lang="zh">钤印、收藏</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerCollector"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_yyc"/>
+        <rdfs:comment xml:lang="zh">钤印、收藏</rdfs:comment>
+        <skos:prefLabel xml:lang="zh">收藏者</skos:prefLabel>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerCollector"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zst"/>
+        <rdfs:comment xml:lang="zh">钤印、收藏</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_item"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#formerCollector"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_zyl"/>
+        <rdfs:comment xml:lang="zh">书</rdfs:comment>
+        <skos:prefLabel xml:lang="zh">批校题跋书写者</skos:prefLabel>
+    </owl:Axiom>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00286_work -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00286_work">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Work"/>
+        <contributor rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_ldm"/>
+        <creator rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_dy"/>
+        <hasEdition rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_edition"/>
+        <hasPartOf rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_work_1"/>
+        <language xml:lang="zh">汉文</language>
+        <title xml:lang="zh">春秋经传集解</title>
+        <skos:prefLabel xml:lang="zh">春秋经传集解三十卷　（晋）杜预撰</skos:prefLabel>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_work"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#contributor"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_ldm"/>
+        <rdfs:comment xml:lang="zh">释文</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_work"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#creator"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_dy"/>
+        <rdfs:comment xml:lang="zh">撰</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#book_00286_work_1 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#book_00286_work_1">
+        <creator rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_fjx"/>
+        <title xml:lang="zh">春秋名号归一图</title>
+        <skos:prefLabel xml:lang="zh">春秋名号归一图二卷</skos:prefLabel>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://rarebib.pkudh.org/ontology/CABC#book_00286_work_1"/>
+        <owl:annotatedProperty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#creator"/>
+        <owl:annotatedTarget rdf:resource="https://rarebib.pkudh.org/ontology/CABC#people_fjx"/>
+        <rdfs:comment>撰</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#city_110000 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#city_110000">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#city_120000 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#city_120000">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#edition_BlockPrint -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#edition_BlockPrint">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#EditionCollection"/>
+        <skos:prefLabel xml:lang="zh">刻本</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#edition_Transcript -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#edition_Transcript">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#EditionCollection"/>
+        <skos:prefLabel xml:lang="zh">抄本</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#org_0101 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#org_0101">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Organization"/>
+        <skos:prefLabel xml:lang="zh">国家图书馆</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#org_0141 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#org_0141">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Organization"/>
+        <skos:prefLabel xml:lang="zh">北京大学图书馆</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#org_0381 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#org_0381">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Organization"/>
+        <skos:prefLabel xml:lang="zh">天津博物馆</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_cy -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_cy">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#SongDynasty"/>
+        <skos:prefLabel xml:lang="zh">程颐</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_dy -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_dy">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#SongDynasty"/>
+        <skos:prefLabel xml:lang="zh">杜预</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_fjx -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_fjx">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#FiveDynastiesAndTenKingdoms"/>
+        <skos:prefLabel xml:lang="zh">冯继先</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_ldm -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_ldm">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#TangDynasty"/>
+        <skos:prefLabel xml:lang="zh">陆德明</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_lsd -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_lsd">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#RepublicOfChina"/>
+        <skos:prefLabel xml:lang="zh">李盛铎</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_pq -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_pq">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#QingDynasty"/>
+        <skos:prefLabel xml:lang="zh">浦祺</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_xqx -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_xqx">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#QingDynasty"/>
+        <skos:prefLabel xml:lang="zh">徐乾学</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_yj -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_yj">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#YuanDynasty"/>
+        <skos:prefLabel xml:lang="zh">岳浚</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_yyc -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_yyc">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#QingDynasty"/>
+        <skos:prefLabel xml:lang="zh">袁廷梼</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_zst -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_zst">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#RepublicOfChina"/>
+        <skos:prefLabel xml:lang="zh">周叔弢</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_zx -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_zx">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#SongDynasty"/>
+        <skos:prefLabel xml:lang="zh">朱熹</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#people_zyl -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#people_zyl">
+        <rdf:type rdf:resource="https://rarebib.pkudh.org/ontology/CABC#Person"/>
+        <dynasty rdf:resource="https://rarebib.pkudh.org/ontology/CABC#RepublicOfChina"/>
+        <skos:prefLabel xml:lang="zh">周一良</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#seal_00159 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#seal_00159">
+        <skos:prefLabel xml:lang="zh">德化李氏凡将阁珍藏</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#seal_00286_1 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#seal_00286_1">
+        <skos:prefLabel xml:lang="zh">徐健庵</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#seal_00286_2 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#seal_00286_2">
+        <skos:prefLabel xml:lang="zh">浦祺之印</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#seal_00286_3 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#seal_00286_3">
+        <skos:prefLabel xml:lang="zh">袁印廷梼</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://rarebib.pkudh.org/ontology/CABC#seal_00286_4 -->
+
+    <owl:NamedIndividual rdf:about="https://rarebib.pkudh.org/ontology/CABC#seal_00286_4">
+        <skos:prefLabel xml:lang="zh">周暹</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
